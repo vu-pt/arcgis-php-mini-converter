@@ -2,7 +2,7 @@
 
 class SpaghettiJsonConverter implements BaseConverter
 {
-    function getJsonData()
+    function getJsonData($type = null)
     {
         $result  = array();
         $point_query = <<<EOI

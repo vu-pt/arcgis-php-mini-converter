@@ -42,10 +42,18 @@ insert into TSP_POINT (idp, name, location, x, y) values
 (40, 'node', 'DH TDTT', 106.79763095921437, 10.873045377243164),
 (41, 'node', 'DH TDTT', 106.79773824757497, 10.872497492919857),
 (42, 'node', 'DH TDTT', 106.798103028001, 10.871991752651327),
-(43, 'node', 'DH TDTT', 106.79698722905079, 10.870474526701626);
+(43, 'node', 'DH TDTT', 106.79698722905079, 10.870474526701626),
+(44, 'node', 'Line Han Thuyen', 106.80269496983459, 10.873445753612248),
+(45, 'node', 'Line Han Thuyen', 106.80284517353944, 10.872097115277965),
+(46, 'node', 'Line Han Thuyen', 106.80265205449035, 10.871486011525423),
+(47, 'node', 'Line Han Thuyen', 106.80196540898253, 10.870558817234572),
+(48, 'node', 'Line Han Thuyen', 106.80149334019589, 10.87013736433164),
+(49, 'node', 'Line Han Thuyen', 106.80166500157284, 10.869884492304125),
+(50, 'node', 'Line Han Thuyen', 106.80149334019589, 10.869231238574498);
 
-insert into TSP_LINE (idl, name, description) value
-(1, 'line', 'Lang DH Thu Duc');
+insert into TSP_LINE (idl, name, description) values
+(1, 'line 1', 'Lang DH Thu Duc'),
+(2, 'line 2', 'Duong Han Thuyen');
 
 insert into TSP_LINE_POINT (idlp, idl, idp, seq) values
 (1, 1, 4, 1),
@@ -59,7 +67,14 @@ insert into TSP_LINE_POINT (idlp, idl, idp, seq) values
 (9, 1, 12, 9),
 (10, 1, 13, 10),
 (11, 1, 14, 11),
-(12, 1, 15, 12);
+(12, 1, 15, 12),
+(13, 2, 44, 1),
+(14, 2, 45, 2),
+(15, 2, 46, 3),
+(16, 2, 47, 4),
+(17, 2, 48, 5),
+(18, 2, 49, 6),
+(19, 2, 50, 7);
 
 insert into TSP_POLYGON (idpo, name, description) values
 (1, 'polygon', 'DH CNTT'),
