@@ -20,4 +20,21 @@ class GeoJsonUtil {
             "id" => "pp".$attribute['idpo']
         );
     }
+    public static function generate2DLine($attribute, $exitedLine = null) {
+        if (!empty($exitedLine)) {
+            $exitedLine['geometry']['coordinates'][] = array(floatval($attribute['x']), floatval($attribute['y']));
+            return $exitedLine;
+        }
+        return array(
+            "type" => "Feature",
+            "properties" => $attribute,
+            "geometry" => array (
+                "type" => "LineString",
+                "coordinates" => array(
+                        array(floatval($attribute['x']), floatval($attribute['y']))
+                )
+            ),
+            "id" => "l".$attribute['idl']
+        );
+    }
 }

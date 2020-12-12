@@ -1,4 +1,4 @@
 <?php
 interface BaseConverter {
-    function getJsonData();
+    function getJsonData($type = null);
 }

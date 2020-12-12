@@ -4,6 +4,7 @@ include_once dirname(__FILE__) . '/app/config.php';
 include_once dirname(__FILE__) . '/app/Connection.php';
 include_once dirname(__FILE__) . '/app/GraphicUtil.php';
 include_once dirname(__FILE__) . '/app/GeoJsonUtil.php';
+include_once dirname(__FILE__) . '/app/DatabaseUtil.php';
 include_once dirname(__FILE__) . '/app/SpaghettiJsonConverter.php';
 include_once dirname(__FILE__) . '/app/SpaghettiGeoJsonConverter.php';
 function print_json_response($object) {
@@ -17,8 +18,9 @@ switch ($name) {
         echo print_json_response($converter->getJsonData());
         break;
     case 'spaghetti_geojson':
+        $type = $_REQUEST['type'];
         $converter = new SpaghettiGeoJsonConverter();
-        echo print_json_response($converter->getJsonData());
+        echo print_json_response($converter->getJsonData($type));
         break;
     default:
         http_response_code(404);
